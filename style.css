@@ -1,3 +1,6 @@
+@media  screen and (min-width: 760px) {
+ 
+
 body {
     background-color: #335c67;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -40,5 +43,7 @@ background-color:#9e2a2b;
             display: flex;
             background-color: #540b0e;
             padding: 1em;
+            
         }
+}
 }
