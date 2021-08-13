@@ -1,8 +1,8 @@
-@media  screen and (min-width: 7px) {
+@media  screen and (min-width: 800px) {
  
 
 body {
-    background-color: #335c67;
+    background-color: #48cae4;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -11,12 +11,33 @@ body {
     margin: auto;
 }
 
+.pizza-cut{
+    border: 1px solid #fff3b0;
+    padding: 1em;
+    margin: 1em;
+    background-color: #48cae4;
+
+}
 .box {
 border: 1px solid #fff3b0;
 padding: 1em;
 margin: 1em;
-background-color: #e09f3e;
+background-color: #00b4d8;
 }
+.pizza-cart{
+    display:inline-flexbox;
+}
+
+    .pizza-cart {
+        margin: 1em;
+    padding: 2em;
+    margin-bottom: 1em;
+    margin-top:1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    background-color:#0077b6;
+    }
+
 
 .middle {
     display: flex;
@@ -25,25 +46,49 @@ background-color: #e09f3e;
 .middle > div {
 margin: auto;
 padding: 4em;
-background-color:#9e2a2b;
+margin-bottom: 4em ;
+background-color:#023e8a;
+width: auto;
 }
 
+.message{
+    margin: 1em;
+    padding: 2em;
+    margin-bottom: 1em;
+    margin-top:1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    background-color:#023e8a;  
+}
 
 
 .pizza_styles > div {
     flex: 1;
 }
 
+
 @media screen and (min-width: 800px) {
     .middle {
         display: flex;
+        
         }
 
         .pizza_styles {
             display: flex;
-            background-color: #540b0e;
+            background-color: #ade8f4;
             padding: 1em;
             
         }
+
+        .orderBtn{
+            background-color: darkcyan;
+        }
+
+
+
+
+
+
 }
+
 }
