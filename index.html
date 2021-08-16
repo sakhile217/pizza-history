@@ -12,7 +12,7 @@
 <body>
 
     <div class="Container">
-        <div class="top"hidden>
+        <div class="top" hidden>
 
             <h1>Pizza Perfect</h1>
 
@@ -24,54 +24,83 @@
                 All the future variation of pizzas has been made with four distinct ingredients -the crust, the sauce,
                 cheese and topping. During the last 60 years in which pizza spread across the world many variations on
                 this theme were produced, but the old and proven designs of Naples chefs still remain most popular.
-               
-               
-               
+
+
+
             </div>
 
         </div>
     </div>
-<div class="pizza-cart">
+    <div class="pizza-cart">
 
-    <h1>Pizza Cart</h1>
-    
-    <h5>Totals</h5>
-    <table>
-      <tr>
-        <td>Small pizza</td>
-        <td>R<span class="smallPrice">29.00</span> </td>
-      </tr>
-      <button type = "button" class="addsmall">+</button>
-      <button type = "button" class="subsmall">-</button>
-      <tr>
-        <td>Medium pizza</td>
-        <td>R<span class="mediumPrice">59.00</span> </td>
-      </tr>
-      <tr>
-        <td>Large pizza</td>
-        <td>R<span class="largePrice">110.00</span> </td>
-      </tr>
-      <tr>
-        <td>Total price</td>
-        <td> R<span class="totalPrice">198.00</span> </td>
-      </tr>
-    </table>
+        <h1>Pizza Cart</h1>
 
-    <button type ="button" class= "orderBtn">
-        <h3>Checkout</h3>
-    </button>
-    <input type="text" class="theInput">
+        
+        <h5>Totals</h5>
 
 
-</div>
+        <table>
 
-    <div class="message">
-       <label for="themessage" >message here</label>
+            <tr>
+                <td class="small">
+                    <h3 class="item">Small Pizza</h3>
+                </td>
+                <td><button class="splusBtn small" id="test" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="smallPizzaQuantity item">0</h3>
+                </td>
+                <td><button class="sminusBtn small" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="smallPizzaTotal">0.00</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="medium">
+                    <h3 class="item">medium Pizza</h3>
+                </td>
+                <td><button class="mplusBtn medium" id="test" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="mediumPizzaQuantity item">0</h3>
+                </td>
+                <td><button class="mminusBtn medium" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="mediumPizzaTotal">0.00</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="large">
+                    <h3 class="item">large Pizza</h3>
+                </td>
+                <td><button class="lplusBtn small" id="test" on type="button" name="add">+</button></td>
+                <td>
+                    <h3 class="largePizzaQuantity item">0</h3>
+                </td>
+                <td><button class="lminusBtn large" on type="button" name="reduce">-</button></td>
+                <td>
+                    <h3 class="item">R<span class="largePizzaTotal">0.00</span>
+                </td>
+            </tr>
+
+            </div>
+        </table>
+
+        <button type="button" class="orderBtn">
+            <h3>Checkout</h3>
+        </button>
+        <label for=""></label>
+        <input class="u-full-width criticalLevelSetting" type="number" placeholder="eg. 65.00">
+
     </div>
 
-</div>
-</div>
-</div>
+    <div class="message">
+        <label for="themessage">message here</label>
+    </div>
+
+    </div>
+    </div>
+    </div>
     <div class="middle">
         <div>
             <h2>Small Pizza</h2>
@@ -84,7 +113,7 @@
             <p>Sweet Chilli BBQ</p>
             <p>Chicken Chilli</p>
 
-            <button type ="button" class= "buysmallBtn">
+            <button type="button" class="buysmallBtn">
                 <h3>Buy</h3>
             </button>
         </div>
@@ -99,7 +128,7 @@
             <p>Sweet Chilli BBQ</p>
             <p>Chicken Chilli</p>
 
-            <button type ="button" class= "buymediumBtn">
+            <button type="button" class="buymediumBtn">
                 <h3>Buy</h3>
             </button>
         </div>
@@ -114,7 +143,7 @@
             <p>Sweet Chilli BBQ</p>
             <p>Chicken Chilli</p>
 
-            <button type ="button" class= "buylargeBtn">
+            <button type="button" class="buylargeBtn">
                 <h3>Buy</h3>
             </button>
         </div>
