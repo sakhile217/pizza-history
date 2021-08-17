@@ -4,23 +4,37 @@ const largerbutton = document.querySelector(".buylargeBtn");
 const theInput = document.querySelector(".theInput");
 const message = document.querySelector(".message");
 const checkout=  document.querySelector(".orderBtn");
+const payOut=  document.querySelector(".payOut");
 
 const splusBtn = document.querySelector(".splusBtn.small");
 const sminusBtn = document.querySelector(".sminusBtn.small");
-const mplusBtn = document.querySelector(".mminusBtn.medium");
+const mplusBtn = document.querySelector(".mplusBtn.medium");
 const mminusBtn = document.querySelector(".mminusBtn.medium");
 const lplusBtn = document.querySelector(".lplusBtn.large");
 const lminusBtn = document.querySelector(".lminusBtn.large");
+const smallPizzaQuantity = document.querySelector(".smallPizzaQuantity");
+const mediumPizzaQuantity = document.querySelector(".mediumPizzaQuantity");
+const largePizzaQuantity = document.querySelector(".largePizzaQuantity");
+const event = document.querySelector(".event");
 
 
 
-   
-function BtnClick() {
+var smallQuantity = 0;
+var smallPizzaTotal = 0;
+var mediumPizzaTotal =0;
+var mediumQuantity = 0;
+var largePizzaTotal = 0;
+var largeQuantity = 0;
+var cartTotal= 0;
+
+
+function BtnClick(event) {
+    
   if (event.target.className == "splusBtn small" ||
    event.target.className == "plusBtn small buy") {
       smallQuantity++;
       smallPizzaQuantity.innerHTML = smallQuantity;
-  } else if (event.target.className == "splusBtn medium" ||
+  } else if (event.target.className == "mplusBtn medium" ||
    event.target.className == "plusBtn medium buy") {
       mediumQuantity++;
       mediumPizzaQuantity.innerHTML = mediumQuantity;
@@ -36,12 +50,14 @@ function BtnClick() {
           smallQuantity = 0;
       }
       smallPizzaQuantity.innerHTML = smallQuantity;
+
   } else if (event.target.className === "mminusBtn medium") {
       mediumQuantity--;
       if (mediumQuantity < 0) {
           mediumQuantity = 0;
       }
       mediumPizzaQuantity.innerHTML = mediumQuantity;
+      
   } else if (event.target.className === "lminusBtn large") {
       largeQuantity--;
       if (largeQuantity < 0) {
@@ -56,21 +72,13 @@ function BtnClick() {
   totalCart = smallQuantity * 29.00 + mediumQuantity * 59.00 + largeQuantity * 120.00;
   cartTotal.innerHTML = totalCart.toFixed(2);
 
-  if (totalCart > 0) {
-      checkOut.classList.remove('hidden');
-  } else {
-      checkOut.classList.add('hidden');
-      payOut.classList.add('hidden');
+ 
   }
-}
 
 
-function checkOutClick(){
-  checkOut.classList.add('hidden');
-  payOut.classList.remove('hidden');
-}
-    
-splusBtn.addEventListener("click", splusBtn.small)
+
+
+ 
 
 
 
@@ -102,3 +110,10 @@ largerbutton.addEventListener("click", function(){
             });
 
 
+            splusBtn.addEventListener("click", BtnClick)
+            sminusBtn.addEventListener("click", BtnClick)
+            mminusBtn.addEventListener("click", BtnClick)
+            mplusBtn.addEventListener("click", BtnClick)
+            lplusBtn.addEventListener("click", BtnClick)
+            lminusBtn.addEventListener("click", BtnClick)
+            
