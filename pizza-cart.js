@@ -15,15 +15,14 @@ const lminusBtn = document.querySelector(".lminusBtn.large");
 const smallPizzaQuantity = document.querySelector(".smallPizzaQuantity");
 const mediumPizzaQuantity = document.querySelector(".mediumPizzaQuantity");
 const largePizzaQuantity = document.querySelector(".largePizzaQuantity");
-const event = document.querySelector(".event");
-
+const smallPizzaTotal = document.querySelector(".smallPizzaTotal");
+const mediumPizzaTotal = document.querySelector(".mediumPizzaTotal");
+const largePizzaTotal = document.querySelector(".largePizzaTotal");
+const totalCart = document.querySelector(".totalCart");
 
 
 var smallQuantity = 0;
-var smallPizzaTotal = 0;
-var mediumPizzaTotal =0;
 var mediumQuantity = 0;
-var largePizzaTotal = 0;
 var largeQuantity = 0;
 var cartTotal= 0;
 
@@ -69,8 +68,8 @@ function BtnClick(event) {
   smallPizzaTotal.innerHTML = (smallQuantity * 29).toFixed(2);
   mediumPizzaTotal.innerHTML = (mediumQuantity * 59).toFixed(2);
   largePizzaTotal.innerHTML = (largeQuantity * 120).toFixed(2);
-  totalCart = smallQuantity * 29.00 + mediumQuantity * 59.00 + largeQuantity * 120.00;
-  cartTotal.innerHTML = totalCart.toFixed(2);
+  message = smallQuantity * 29.00 + mediumQuantity * 59.00 + largeQuantity * 120.00;
+  cartTotal.innerHTML = message.toFixed(2);
 
  
   }
