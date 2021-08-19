@@ -18,8 +18,8 @@ const largePizzaQuantity = document.querySelector(".largePizzaQuantity");
 const smallPizzaTotal = document.querySelector(".smallPizzaTotal");
 const mediumPizzaTotal = document.querySelector(".mediumPizzaTotal");
 const largePizzaTotal = document.querySelector(".largePizzaTotal");
-const totalCart = document.querySelector(".totalCart");
-
+const cartTotalElem = document.querySelector(".totalCart");
+const checkTotalElem = document.querySelector(".checkTotal");
 
 var smallQuantity = 0;
 var mediumQuantity = 0;
@@ -61,6 +61,7 @@ function BtnClick(event) {
       largeQuantity--;
       if (largeQuantity < 0) {
           largeQuantity = 0;
+
       }
       largePizzaQuantity.innerHTML = largeQuantity;
   }
@@ -68,8 +69,8 @@ function BtnClick(event) {
   smallPizzaTotal.innerHTML = (smallQuantity * 29).toFixed(2);
   mediumPizzaTotal.innerHTML = (mediumQuantity * 59).toFixed(2);
   largePizzaTotal.innerHTML = (largeQuantity * 120).toFixed(2);
-  message = smallQuantity * 29.00 + mediumQuantity * 59.00 + largeQuantity * 120.00;
-  cartTotal.innerHTML = message.toFixed(2);
+  cartTotal = smallQuantity * 29.00 + mediumQuantity * 59.00 + largeQuantity * 120.00;
+  cartTotalElem.innerHTML = cartTotal.toFixed(2);
 
  
   }
@@ -83,6 +84,7 @@ function BtnClick(event) {
 
 smallbutton.addEventListener("click", function(){
     
+
 message.innerHTML= "You ordered small, Enter Total amount and check out"
 
 
@@ -103,10 +105,34 @@ largerbutton.addEventListener("click", function(){
         });
 
         checkout.addEventListener("click", function(){
+            var checkTotalElemval = checkTotalElem.value;
+            if (checkTotalElemval < cartTotal){
+               message.innerHTML= "insuficient funds"
     
-            message.innerHTML= "Enjoy your pizzas"
-            
+    
+                
+            } else if (checkTotalElemval >= cartTotal ){
+                message.innerHTML= "Enjoy your Pizza"
+            }
             });
+
+    payOut.addEventListener("click", function(){
+        var checkTotalElemval = checkTotalElem.value;
+        if (checkTotalElemval < cartTotal){
+           message.innerHTML= "insuficient funds"
+
+
+            
+        } else if (checkTotalElemval >= cartTotal ){
+            message.innerHTML= "Payment sucessful"
+        }
+        else if (checkTotalElemval > cartTotal) {
+            message.innerHTML= (checkTotalElem - cartTotal);  
+        }
+        
+    });
+
+
 
 
             splusBtn.addEventListener("click", BtnClick)
